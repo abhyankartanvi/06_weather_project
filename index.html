@@ -53,19 +53,62 @@
         </div>
         <!-- end of first container on the left -->
         <!-- start of second container main body -->
+
         <div class="col-9">
-          <!-- display city once search is clicked -->
-          <h3 class="bolder display-cityname">Melbourne</h3>
-          <!-- display weather details -->
-          <p>Temperature:<span id="temperature"></span></p>
-          <p>Humidity:<span id="humidity"></span></p>
-          <p>Wind Speed:<span id="wind-speed"></span></p>
-          <p>
-            UV index:<span
-              class="bg-danger rounded p-2 text-white"
-              id="uv-index"
-            ></span>
-          </p>
+          <div class="border border-primary">
+            <!-- display city once search is clicked -->
+            <h3 class="bolder display-cityname">Melbourne</h3>
+            <!-- display weather details -->
+            <p>Temperature:<span id="temperature"></span></p>
+            <p>Humidity:<span id="humidity"></span></p>
+            <p>Wind Speed:<span id="wind-speed"></span></p>
+            <p>
+              UV index:<span
+                class="bg-danger rounded p-2 text-white"
+                id="uv-index"
+              ></span>
+            </p>
+          </div>
+          <!-- end of contents within border -->
+          <!-- start of future weather details -->
+          <section class="future-weather-container">
+            <h3>5-Day Forecast:</h3>
+            <div class="future-weather future-weather-box">
+              <p class="future-weather-date0"></p>
+              <p class="future-weather-logo0"></p>
+              <p>Temp: <span class="futureTemp0"></span></p>
+              <p>Humidity: <span class="future-humidity0"></span></p>
+            </div>
+
+            <div class="future-weather">
+              <p class="future-weather-date1"></p>
+              <p class="future-weather-logo1"></p>
+              <p>Temp: <span class="futureTemp1"></span></p>
+              <p>Humidity: <span class="future-humidity1"></span></p>
+            </div>
+
+            <div class="future-weather">
+              <p class="future-weather-date2"></p>
+              <p class="future-weather-logo2"></p>
+              <p>Temp: <span class="futureTemp2"></span></p>
+              <p>Humidity: <span class="future-humidity2"></span></p>
+            </div>
+
+            <div class="future-weather">
+              <p class="future-weather-date3"></p>
+              <p class="future-weather-logo3"></p>
+              <p>Temp: <span class="futureTemp3"></span></p>
+              <p>Humidity: <span class="future-humidity3"></span></p>
+            </div>
+
+            <div class="future-weather">
+              <p class="future-weather-date4"></p>
+              <p class="future-weather-logo4"></p>
+              <p>Temp: <span class="futureTemp4"></span></p>
+              <p>Humidity: <span class="future-humidity4"></span></p>
+            </div>
+          </section>
+          <!-- end of future weather details -->
         </div>
 
         <!-- end of second container -->
@@ -73,6 +116,7 @@
     </div>
 
     <!-- links to JS/JQUERY -->
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="./assets/script.js"></script>
   </body>
 </html>
