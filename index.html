@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <!-- css link -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4 text-center">Weather Dashboard</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <h2>Search for a city</h2>
+
+          <!-- enter city name/search button -->
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter City Name"
+              aria-label="City Search"
+              aria-describedby="search city"
+              id="city-search"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">
+                Search
+              </button>
+            </div>
+          </div>
+          <!-- end of search city button -->
+
+          <!-- start of clear button, add clearhistory class to later add a click event and clear previous searches -->
+          <button type="button" class="btn btn-outline-secondary clear-history">
+            Clear History
+          </button>
+          <!-- end of clear button -->
+          <!-- create ul to append as saved previous searches -->
+          <ul id="city-history"></ul>
+          <!--end of clear history  -->
+        </div>
+        <!-- end of first container on the left -->
+      </div>
+    </div>
+
+    <!-- links to JS/JQUERY -->
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
