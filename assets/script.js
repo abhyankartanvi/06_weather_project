@@ -1,5 +1,6 @@
 let city = "Melbourne";
 let citySearch = document.getElementById("city-search");
+let searchButton = document.querySelector("#search-button");
 let clearHistory = document.querySelector("#clear-history");
 let displayCity = document.querySelector(".display-cityname");
 let displayTemperature = document.querySelector("#temperature");
@@ -13,6 +14,7 @@ function currentWeather(city) {
   var queryURL =
     "http://api.openweathermap.org/data/2.5/weather?q=" +
     city +
+    "&units=metric" +
     "&appid=" +
     APIKey;
   console.log("this is query URL", queryURL);
@@ -28,9 +30,30 @@ function currentWeather(city) {
     const iconURL =
       "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
     console.log(iconURL);
+    // work on getting the time correct
+    // add the city name, time and icon
+
+    $(displayCity).html(response.name + "<img src=" + iconURL + ">");
+    console.log(displayCity);
+    // adding temp
+    $(displayTemperature).text(response.main.temp + " celcius");
+    $(displayHumidity).text(" " + response.main.humidity + "%");
+    $(displayWSpeed).text(" " + response.wind.speed + " meter/sec ");
+
+    // UV index to be added later
   });
 }
 
 currentWeather(city);
+
+// function displayWeather(event) {
+//   event.preventDefault();
+//   if (citySearch.val() !== "") {
+//     city = citySearch.val();
+//     currentWeather(city);
+//   }
+// }
+
+// $("#search-button").on("click", displayWeather);
 
 // questions to ask TA - WHY DOES THE ICON API PARAT NOT CONTAIN ? IS IT BECAUSE WE ARE NOT ADDING PRESET PARAM AND SIMPLY ASSIGNING VAR
