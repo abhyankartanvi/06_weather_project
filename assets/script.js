@@ -1,4 +1,4 @@
-let city = "Melbourne";
+let city = "";
 let citySearch = document.getElementById("city-search");
 let searchButton = document.querySelector("#search-button");
 let clearHistory = document.querySelector("#clear-history");
@@ -44,16 +44,15 @@ function currentWeather(city) {
   });
 }
 
-currentWeather(city);
+function displayWeather(event) {
+  event.preventDefault();
+  console.log(citySearch.value);
+  if (citySearch.value !== "") {
+    city = citySearch.value;
+    currentWeather(city);
+  }
+}
 
-// function displayWeather(event) {
-//   event.preventDefault();
-//   if (citySearch.val() !== "") {
-//     city = citySearch.val();
-//     currentWeather(city);
-//   }
-// }
-
-// $("#search-button").on("click", displayWeather);
+$("#search-button").on("click", displayWeather);
 
 // questions to ask TA - WHY DOES THE ICON API PARAT NOT CONTAIN ? IS IT BECAUSE WE ARE NOT ADDING PRESET PARAM AND SIMPLY ASSIGNING VAR
