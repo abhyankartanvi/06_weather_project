@@ -12,7 +12,7 @@ var APIKey = "01135a449798815354b5421f38d6f89f";
 // creating ajax function to display current weather
 function currentWeather(city) {
   var queryURL =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    "http://api.openweathermap.org/data/2.5/weather?q=" +
     city +
     "&units=metric" +
     "&appid=" +
@@ -29,7 +29,7 @@ function currentWeather(city) {
     const weatherIcon = response.weather[0].icon;
     console.log(weatherIcon);
     const iconURL =
-      "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
+      "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
     console.log(iconURL);
     // work on getting the time correct
     const displayDate = new Date(response.dt * 1000).toDateString();
@@ -63,7 +63,7 @@ function displayWeather(event) {
 // 5 day forecast
 function weatherForecast(city) {
   var responseURL =
-    "https://api.openweathermap.org/data/2.5/forecast?q=" +
+    "http://api.openweathermap.org/data/2.5/forecast?q=" +
     city +
     "&units=metric" +
     "&appid=" +
@@ -78,7 +78,7 @@ function weatherForecast(city) {
     for (i = 0; i < 5; i++) {
       const iconCode = response.list[i].weather[0].icon;
       console.log(iconCode);
-      const fIconURL = "https://openweathermap.org/img/wn/" + iconCode + ".png";
+      const fIconURL = "http://openweathermap.org/img/wn/" + iconCode + ".png";
       console.log(fIconURL);
 
       const fTemp = response.list[i].main.temp;
