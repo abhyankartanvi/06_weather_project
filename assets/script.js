@@ -18,7 +18,7 @@ var APIKey = "01135a449798815354b5421f38d6f89f";
 // creating ajax function to display current weather
 function currentWeather(city) {
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
     "&units=metric" +
     "&appid=" +
